@@ -60,10 +60,21 @@ describe("About Applying What We Have Learnt", function() {
   });
 
   it("should add all the natural numbers below 1000 that are multiples of 3 or 5 (functional)", function () {
+    // Memo is final result // running total
+    // Num is the value
 
     // var sum = sum.range(0, 1000, 1)_.reduce(sum, function(memo, num) { return memo % 3 === 0 || memo % 5 === 0; }, 0);    /* try chaining range() and reduce() */
     // var sum = _.range(0, 1000, 1)_.reduce(sum, function(memo, num) { return memo % 3 === 0 || memo % 5 === 0; }, 0);    /* try chaining range() and reduce() */
 
+    var rangeArray = _.range(0, 10, 1);
+    // console.log(rangeArray);
+
+    var reduceArray = _.reduce(rangeArray, function(memo, num) {
+      if (num % 3 === 0 || num % 5 === 0) {
+        return memo += num;
+      }
+    });
+    // console.log(reduceArray);
 
     expect(233168).toBe(233168);
   });
@@ -92,40 +103,42 @@ describe("About Applying What We Have Learnt", function() {
   /*********************************************************************************/
   /* UNCOMMENT FOR EXTRA CREDIT */
   
-  it("should find the largest prime factor of a composite number", function () {
+/*
+//   it("should find the largest prime factor of a composite number", function () {
     
-    var compositeNum = 20;
-    var largestPrimeFac = undefined;
+//     var compositeNum = 20;
+//     var largestPrimeFac = undefined;
 
-    function largestPrime(comp) {
-      if (comp % 3 === 1) {
-        for (var i = 0; i <= comp; i++) {
-          if (comp[i] % 3 === 1) {
-            largestPrimeFac += comp[i];
-          } else if (comp[i] > largestPrimeFac) {
-            largestPrimeFac += comp[i];
-          }
-        }
-      }
-       return largestPrimeFac; 
-    }
-  });
+//     function largestPrime(comp) {
+//       if (comp % 3 === 1) {
+//         for (var i = 0; i <= comp; i++) {
+//           if (comp[i] % 3 === 1) {
+//             largestPrimeFac += comp[i];
+//           } else if (comp[i] > largestPrimeFac) {
+//             largestPrimeFac += comp[i];
+//           }
+//         }
+//       }
+//        return largestPrimeFac; 
+//     }
+//   });
 
-  it("should find the largest palindrome made from the product of two 3 digit numbers", function () {
+//   it("should find the largest palindrome made from the product of two 3 digit numbers", function () {
     
-  });
+//   });
 
-  it("should find the smallest number divisible by each of the numbers 1 to 20", function () {
+//   it("should find the smallest number divisible by each of the numbers 1 to 20", function () {
       
     
-  });
+//   });
 
-  it("should find the difference between the sum of the squares and the square of the sums", function () {
+//   it("should find the difference between the sum of the squares and the square of the sums", function () {
     
-  });
+//   });
 
-  it("should find the 10001st prime", function () {
+//   it("should find the 10001st prime", function () {
 
-  });
+//   });
   
-});
+// });
+*/
